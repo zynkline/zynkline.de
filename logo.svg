@@ -1,0 +1,11 @@
+<svg width="300" height="52" viewBox="0 0 300 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mark -->
+  <rect x="4" y="4" width="44" height="44" rx="10" fill="#0a0a0a"/>
+  <!-- Stylized Z made of lines -->
+  <line x1="15" y1="16" x2="37" y2="16" stroke="#c8a44e" stroke-width="3" stroke-linecap="round"/>
+  <line x1="37" y1="16" x2="15" y2="36" stroke="#c8a44e" stroke-width="3" stroke-linecap="round"/>
+  <line x1="15" y1="36" x2="37" y2="36" stroke="#c8a44e" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Wordmark -->
+  <text x="60" y="34" fill="#0a0a0a" font-size="22" font-family="'Space Grotesk', 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="700" letter-spacing="5">ZYNKLINE</text>
+</svg>
