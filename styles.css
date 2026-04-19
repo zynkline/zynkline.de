@@ -906,8 +906,11 @@ h1 {
     display: none;
   }
 
-  .top-bar {
-    display: none;
+  .top-bar-inner {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    font-size: 0.68rem;
   }
 
   .feature-grid,
