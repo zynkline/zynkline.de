@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zynkline | Projektreferenzen</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 16mm;
+    }
+
+    :root {
+      --ink: #111111;
+      --muted: #4b4b4b;
+      --line: #dcdcdc;
+      --accent: #c8a44e;
+      --soft: #f7f3e8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Arial", sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+    }
+
+    .cover {
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 14px;
+      background: linear-gradient(120deg, #ffffff 0%, #faf8f2 100%);
+    }
+
+    .cover-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 12px;
+    }
+
+    .brand-block {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 84px;
+      height: auto;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .brand {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #6a6a6a;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .contact-block {
+      min-width: 220px;
+      max-width: 250px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.92);
+      padding: 10px 12px;
+    }
+
+    .contact-title {
+      margin: 0 0 6px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #666;
+    }
+
+    .contact-line {
+      margin: 0;
+      font-size: 11px;
+      line-height: 1.45;
+      color: #222;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1.08;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px;
+      background: #fff;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 16px;
+      line-height: 1.1;
+    }
+
+    .metric span {
+      font-size: 11px;
+      color: #666;
+    }
+
+    h2 {
+      margin: 12px 0 8px;
+      font-size: 16px;
+      border-left: 4px solid var(--accent);
+      padding-left: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 272px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .card-media {
+      height: 150px;
+      background: #ece7dc;
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+      display: block;
+    }
+
+    .card-body {
+      padding: 10px 11px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .tag {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      border: 1px solid #bbb;
+      border-radius: 999px;
+      padding: 2px 6px;
+      color: #333;
+      background: #fafafa;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.25;
+    }
+
+    .meta {
+      margin: 0;
+      font-size: 11px;
+      color: #555;
+    }
+
+  </style>
+</head>
+<body>
+  <section class="cover">
+    <div class="cover-top">
+      <div class="brand-block">
+        <img class="brand-logo" src="logo.png" alt="Zynkline Logo" />
+        <div>
+          <p class="brand">Zynkline</p>
+          <h1>Projektreferenzen<br/>Gebäudetechnik & TGA</h1>
+        </div>
+      </div>
+      <aside class="contact-block">
+        <p class="contact-title">Kontakt</p>
+        <p class="contact-line">Zynkline</p>
+        <p class="contact-line">info@zynkline.de</p>
+        <p class="contact-line">+49 1523 1417170</p>
+        <p class="contact-line">www.zynkline.de</p>
+      </aside>
+    </div>
+    <div class="summary">
+      <div class="metric"><strong>9</strong><span>ausgewählte Referenzprojekte</span></div>
+      <div class="metric"><strong>DE / AT</strong><span>regionale Einsatzschwerpunkte</span></div>
+      <div class="metric"><strong>HLKS + Industrie</strong><span>gewerkeübergreifende Umsetzung</span></div>
+    </div>
+  </section>
+
+  <h2>Referenzauszug</h2>
+  <section class="grid">
+    <article class="card">
+      <div class="card-media">
+        <img src="pdf-assets/volksschule_wattens.jpeg" alt="Volksschule Wattens" />
+      </div>
+      <div class="card-body">
+        <span class="tag">Sanitär</span>
+        <h3>Sanitärinstallation in der Volksschule</h3>
+        <p class="meta">Wattens - Kompletter Sanitärbereich</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <img src="pdf-assets/wohnkomplex_frankfurt.jpeg" alt="Wohnkomplex Frankfurt" />
+      </div>
+      <div class="card-body">
+        <span class="tag">Rohrleitung</span>
+        <h3>Abwasserleitung im Wohnkomplex</h3>
+        <p class="meta">Frankfurt am Main - Abwasserinstallationen</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <img src="pdf-assets/klimagerate_debeka.jpeg" alt="Debeka Koblenz" />
+      </div>
+      <div class="card-body">
+        <span class="tag">Klima</span>
+        <h3>Klimageräte</h3>
+        <p class="meta">Koblenz - Debeka BKK</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <img src="pdf-assets/fussbodenheizung.jpeg" alt="Fußbodenheizung Berlin" />
+      </div>
+      <div class="card-body">
+        <span class="tag">Heizung</span>
+        <h3>Fußbodenheizung im Wohnkomplex</h3>
+        <p class="meta">Berlin - 30+ Objekte</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <img src="pdf-assets/kbr_trier.jpeg" alt="Kurfürst-Balduin-Realschule Trier" />
+      </div>
+      <div class="card-body">
+        <span class="tag">Lüftung</span>
+        <h3>Installation der Lüftungszentrale</h3>
+        <p class="meta">Trier - Kurfürst-Balduin-Realschule plus</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <img src="pdf-assets/wohnkomplex_berlin.jpeg" alt="Wohnkomplex Berlin Sanitär" />
+      </div>
+      <div class="card-body">
+        <span class="tag">Sanitär</span>
+        <h3>Sanitärinstallation im Wohnkomplex</h3>
+        <p class="meta">Berlin - Trinkwasser und Abwasser</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <img src="pdf-assets/st_vincenz_krankenhaus.jpeg" alt="St. Vincenz Krankenhaus" />
+      </div>
+      <div class="card-body">
+        <span class="tag">HLK</span>
+        <h3>Lüftungsgeräte sowie Kälte- und Heizungstechnik</h3>
+        <p class="meta">Limburg an der Lahn - St. Vincenz-Krankenhaus</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <img src="pdf-assets/imat_renningen.jpeg" alt="IMAT Renningen Lüftung" />
+      </div>
+      <div class="card-body">
+        <span class="tag">Lüftung</span>
+        <h3>Lüftungstechnik</h3>
+        <p class="meta">Renningen - IMAT UVE</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <img src="pdf-assets/johndeere.jpeg" alt="John Deere Mannheim" />
+      </div>
+      <div class="card-body">
+        <span class="tag">Industrie</span>
+        <h3>Installation der Druckluftzentrale</h3>
+        <p class="meta">Mannheim - John Deere</p>
+      </div>
+    </article>
+  </section>
+</body>
+</html>
