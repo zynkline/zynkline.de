@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zynkline - Projektreferenzen für Partner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #eef2f7 0%, #dce5f1 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 44px 32px;
+            text-align: center;
+        }
+
+        .header-meta {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.84);
+        }
+
+        .header-meta span {
+            padding: 6px 10px;
+            border: 1px solid rgba(255,255,255,0.18);
+            border-radius: 999px;
+            background: rgba(255,255,255,0.06);
+        }
+
+        .header-meta a {
+            color: rgba(255,255,255,0.92);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .header-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .kicker {
+            display: inline-block;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #d6e8ff;
+            margin-bottom: 12px;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.3px;
+            line-height: 1.25;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: rgba(255,255,255,0.92);
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .proof-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .proof-item {
+            border: 1px solid #dbe4ef;
+            background: #f9fbfe;
+            border-radius: 8px;
+            padding: 12px 14px;
+            text-align: center;
+        }
+
+        .proof-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            line-height: 1.2;
+            color: #1f3a56;
+        }
+
+        .proof-label {
+            font-size: 11px;
+            color: #55708c;
+            margin-top: 4px;
+        }
+
+        .section-intro {
+            margin-bottom: 40px;
+            padding: 26px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #edf3f9 100%);
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+        }
+
+        .section-intro h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+
+        .section-intro p {
+            font-size: 14px;
+            color: #4b5968;
+            line-height: 1.75;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            margin-bottom: 34px;
+        }
+
+        .project-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            page-break-inside: avoid;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 300px;
+            background: #dce6f1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            display: block;
+        }
+
+        .project-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(44, 62, 80, 0.95);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+        }
+
+        .project-content {
+            padding: 22px;
+        }
+
+        .project-number {
+            font-size: 12px;
+            color: #3498db;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 7px;
+        }
+
+        .project-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 9px;
+            line-height: 1.4;
+        }
+
+        .project-meta {
+            font-size: 13px;
+            color: #63788d;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .project-desc {
+            font-size: 14px;
+            color: #4b5968;
+            line-height: 1.6;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .divider {
+            width: 40px;
+            height: 3px;
+            background: #3498db;
+            margin: 30px auto;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 38px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .footer-company {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .footer-contact {
+            font-size: 13px;
+            color: #5f7386;
+            margin: 5px 0;
+        }
+
+        .footer-contact a {
+            color: #2b6da3;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-address {
+            font-size: 12px;
+            color: #8a9bab;
+            margin-top: 12px;
+            line-height: 1.6;
+        }
+
+        @media print {
+            @page {
+                size: 210mm 2000mm;
+                margin: 8mm;
+            }
+
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .project-card {
+                page-break-inside: avoid;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            }
+
+            .projects-grid {
+                display: grid !important;
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+                gap: 14px;
+            }
+
+            .project-content {
+                padding: 16px;
+            }
+
+            .project-title {
+                font-size: 16px;
+            }
+
+            .project-desc {
+                font-size: 13px;
+            }
+
+            .proof-strip {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .proof-strip {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 32px 18px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="kicker">Projektreferenzen • HLKS • Sanitär • Lüftung</span>
+            <div class="header-meta">
+                <span><a href="mailto:info@zynkline.de">info@zynkline.de</a></span>
+                <span><a href="tel:+4915231417170">+49 1523 1417170</a></span>
+                <span><a href="https://www.zynkline.de" target="_blank" rel="noopener noreferrer">www.zynkline.de</a></span>
+                <span>Einsatzbereit in ganz Europa</span>
+            </div>
+            <div class="logo">ZYNKLINE</div>
+            <h1>Zuverlässige Fachteams für anspruchsvolle TGA-Projekte</h1>
+            <p class="subtitle">Für Generalunternehmer und TGA-Partner, die zertifizierte Fachkräfte, saubere Koordination und verlässliche Ausführung in ganz Europa schätzen.</p>
+        </header>
+
+        <div class="content">
+            <div class="proof-strip">
+                <div class="proof-item">
+                    <div class="proof-number">20+</div>
+                    <div class="proof-label">Abgeschlossene Projekte</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number">48h</div>
+                    <div class="proof-label">Ø Mobilisierungszeit</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number">100%</div>
+                    <div class="proof-label">Zertifiziert und versichert</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number">92%</div>
+                    <div class="proof-label">Wiederholungspartnerrate</div>
+                </div>
+            </div>
+
+            <div class="section-intro">
+                <h2>Ausgewählte Referenzen</h2>
+                <p>Nachfolgend ein Überblick über Projekte, bei denen Zynkline qualifizierte Fachkräfte bereitgestellt und Schlüsselleistungen in den Bereichen HLKS, Sanitär, Heizung, Lüftung und Industriemontage erbracht hat. Wenn Sie aktuell ein Projekt besetzen und schnell ein verlässliches Team benötigen, spiegeln diese Referenzen das Niveau unserer Unterstützung vor Ort wider.</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="site-photos-compressed/volksschule_wattens.jpeg" alt="Primary School at Kirchplatz Wattens">
+                        <span class="project-badge">Sanitär</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number">Referenz 01</div>
+                        <div class="project-title">Sanitärinstallation in der Volksschule</div>
+                        <div class="project-meta">Wattens, Österreich</div>
+                        <div class="project-desc">Vollständige Sanitärinstallation inkl. Trinkwasser- und Abwassersysteme für eine Bildungseinrichtung.</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="site-photos-compressed/wohnkomplex_frankfurt.jpeg" alt="Wastewater pipeline in Frankfurt">
+                        <span class="project-badge">Rohrleitung</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number">Referenz 02</div>
+                        <div class="project-title">Abwasserleitung in einem Wohnkomplex</div>
+                        <div class="project-meta">Frankfurt am Main, Deutschland</div>
+                        <div class="project-desc">Großflächige Abwasserleitungsinstallation für eine Mehrfamilienhaus-Wohnanlage.</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="site-photos-compressed/klimagerate_debeka.jpeg" alt="Air conditioning units at Debeka">
+                        <span class="project-badge">Kälte & Klima</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number">Referenz 03</div>
+                        <div class="project-title">Klimaanlagen</div>
+                        <div class="project-meta">Koblenz, Deutschland</div>
+                        <div class="project-desc">Installation gewerblicher Klimaanlagen für Büroräumlichkeiten mit zuverlässigen Klimaregelungsanforderungen.</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="site-photos-compressed/fussbodenheizung.jpeg" alt="Underfloor heating installation">
+                        <span class="project-badge">Heizung</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number">Referenz 04</div>
+                        <div class="project-title">Fußbodenheizung in einem Wohnkomplex</div>
+                        <div class="project-meta">Berlin, Deutschland</div>
+                        <div class="project-desc">Verlegung von Fußbodenheizungssystemen in über 30 Wohneinheiten mit individueller Zonenregelung.</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="site-photos-compressed/kbr_trier.jpeg" alt="Air handling plant at school">
+                        <span class="project-badge">Lüftung</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number">Referenz 05</div>
+                        <div class="project-title">Raumlufttechnik-Installation</div>
+                        <div class="project-meta">Trier, Deutschland</div>
+                        <div class="project-desc">Installation einer leistungsstarken Lüftungs- und Klimaanlage für eine Bildungseinrichtung.</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="site-photos-compressed/wohnkomplex_berlin.jpeg" alt="Sanitary installation in Berlin">
+                        <span class="project-badge">Sanitär</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number">Referenz 06</div>
+                        <div class="project-title">Sanitärinstallation in einem Wohnkomplex</div>
+                        <div class="project-meta">Berlin, Deutschland</div>
+                        <div class="project-desc">Vollumfängliche Trinkwasser- und Abwasserinfrastruktur für eine große Wohnanlage.</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="site-photos-compressed/st_vincenz_krankenhaus.jpeg" alt="Hospital HVAC systems">
+                        <span class="project-badge">Kälte & Klima</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number">Referenz 07</div>
+                        <div class="project-title">Lüftungsgeräte sowie Kühl- und Heizsysteme</div>
+                        <div class="project-meta">Limburg an der Lahn, Deutschland</div>
+                        <div class="project-desc">Umfassende Klimatisierungssysteme für ein Krankenhausumfeld mit hohen Leistungsanforderungen.</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="site-photos-compressed/imat_renningen.jpeg" alt="Ventilation systems at IMAT">
+                        <span class="project-badge">Lüftung</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number">Referenz 08</div>
+                        <div class="project-title">Lüftungssysteme</div>
+                        <div class="project-meta">Renningen, Deutschland</div>
+                        <div class="project-desc">Industrielle Lüftungsinstallation für ein Fertigungswerk mit definierten Luftqualitäts- und Prozessanforderungen.</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="site-photos-compressed/johndeere.jpeg" alt="Compressed air plant at John Deere">
+                        <span class="project-badge">Industrie</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number">Referenz 09</div>
+                        <div class="project-title">Druckluftanlage – Montage</div>
+                        <div class="project-meta">Mannheim, Deutschland</div>
+                        <div class="project-desc">Industrielle Druckluftanlage für einen führenden Maschinenbaubetrieb – von der Vorfertigung bis zur Inbetriebnahme.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+        </div>
+
+        <footer>
+            <div class="footer-company">ZYNKLINE s.r.o.</div>
+            <div class="footer-contact">Ihr Personalpartner für TGA-Projekte in Europa</div>
+            <div class="footer-contact">E-Mail: <a href="mailto:info@zynkline.de">info@zynkline.de</a> | Tel.: <a href="tel:+4915231417170">+49 1523 1417170</a></div>
+            <div class="footer-contact">Web: <a href="https://www.zynkline.de" target="_blank" rel="noopener noreferrer">www.zynkline.de</a></div>
+            <div class="footer-address">
+                Šlikova 301/28, Břevnov (Praha 6)<br>
+                169 00 Praha, Tschechische Republik<br>
+                IČO 24350141
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
