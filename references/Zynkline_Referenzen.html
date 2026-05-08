@@ -184,6 +184,22 @@
             display: block;
         }
 
+        .project-image--collage {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: #e5edf6;
+            overflow: hidden;
+        }
+
+        .project-image--collage img {
+            position: static;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
         .project-badge {
             position: absolute;
             top: 12px;
@@ -402,15 +418,16 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="site-photos-compressed/wohnkomplex_frankfurt.jpeg" alt="Wastewater pipeline in Frankfurt">
+                    <div class="project-image project-image--collage">
+                        <img src="site-photos-compressed/florsheim_gesundheitszentrum_1.jpeg" alt="Heating, plumbing and sewage systems in health center in Florsheim am Main - photo 1">
+                        <img src="site-photos-compressed/florsheim_gesundheitszentrum_2.jpeg" alt="Heating, plumbing and sewage systems in health center in Florsheim am Main - photo 2">
                         <span class="project-badge">Rohrleitung</span>
                     </div>
                     <div class="project-content">
                         <div class="project-number">Referenz 02</div>
-                        <div class="project-title">Abwasserleitung in einem Wohnkomplex</div>
-                        <div class="project-meta">Frankfurt am Main, Deutschland</div>
-                        <div class="project-desc">Großflächige Abwasserleitungsinstallation für eine Mehrfamilienhaus-Wohnanlage.</div>
+                        <div class="project-title">Heizung, Sanitär- und Abwasserleitungen</div>
+                        <div class="project-meta">Flörsheim am Main, Deutschland</div>
+                        <div class="project-desc">Komplette Trinkwasser-, Abwasser- und Heizungsverteilungssysteme – von der Heizzentrale bis zur Heizkörpermontage.</div>
                     </div>
                 </div>
 
@@ -493,15 +510,16 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="site-photos-compressed/johndeere.jpeg" alt="Compressed air plant at John Deere">
+                    <div class="project-image project-image--collage">
+                        <img src="site-photos-compressed/johndeere.jpeg" alt="Compressed air plant at John Deere - photo 1">
+                        <img src="site-photos-compressed/johndeere_2.jpeg" alt="Compressed air plant at John Deere - photo 2">
                         <span class="project-badge">Industrie</span>
                     </div>
                     <div class="project-content">
                         <div class="project-number">Referenz 09</div>
                         <div class="project-title">Druckluftanlage – Montage</div>
                         <div class="project-meta">Mannheim, Deutschland</div>
-                        <div class="project-desc">Industrielle Druckluftanlage für einen führenden Maschinenbaubetrieb – von der Vorfertigung bis zur Inbetriebnahme.</div>
+                        <div class="project-desc">Industrielle Druckluftanlage für einen führenden Maschinenbaubetrieb – von der Vorbereitung bis zur Inbetriebnahme.</div>
                     </div>
                 </div>
             </div>
